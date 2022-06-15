@@ -37,7 +37,7 @@
       die ('Wrong Image Type!');
 
     else if ($_FILES['image_upload']['size']/1024 < 250 || $_FILES['image_upload']['size']/1024 > 5242880)
-      die ('Wrong Image Size!');
+      die ('Wrong Image Size!<br>SIZE: ' . $_FILES['image_upload']['size']/1024);
 
     else if ($width > 1500 || $height > 1500)
       die ('Wrong Width or Height!');
