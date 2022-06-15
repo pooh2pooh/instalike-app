@@ -36,7 +36,7 @@
     if (exif_imagetype($_FILES['image_upload']['tmp_name']) != IMAGETYPE_JPEG && exif_imagetype($_FILES['image_upload']['tmp_name']) != IMAGETYPE_PNG)
       die ('Wrong Image Type!');
 
-    else if ($_FILES['image_upload']['size']/1024 < 250 || $_FILES['image_upload']['size']/1024 > 5242880)
+    else if (intval($_FILES['image_upload']['size']/1024) < 200 || intval($_FILES['image_upload']['size']/1024) > 5242880)
       die ('Wrong Image Size!<br>SIZE: ' . $_FILES['image_upload']['size']/1024);
 
     else if ($width > 1500 || $height > 1500)
