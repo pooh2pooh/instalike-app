@@ -55,7 +55,7 @@
     }
 
     copy($_FILES['image_upload']['tmp_name'], $path. $safe_image_name);
-    resize($safe_image_name, 100);
+    resize($safe_image_name, 400);
 
     $images_query = "INSERT INTO images (name, author_id, views) VALUES ('$safe_image_name', '$safe_author_id', 0)";
     $images_result = $conn->query($images_query);
