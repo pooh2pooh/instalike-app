@@ -1,10 +1,12 @@
 <?php session_start();
 
+  include_once "config.inc.php";
+  
   # Если и логин и пароль пришли,
   # сверяем их с теми что хранятся в базе
   # ; НЕ ЗАБУДЬ УКАЗАТЬ ПРАВИЛЬНЫЕ ДАННЫЕ ДЛЯ ПОДКЛЮЧЕНИЯ К БАЗЕ!
 
-  $conn = new mysqli('localhost', 'pooh', 'blackPooh201#', 'test'); # <-- ДАННЫЕ ДЛЯ ПОДКЛЮЧЕНИЯ К БАЗЕ ПРОПИСЫВАТЬ СЮДА ВМЕСТО localhost - сервер, pooh - пользователь, 1234 - пароль, test - база данных
+  $conn = new mysqli($config['server'], $config['user'], $config['password'], $config['database']); # <-- ДАННЫЕ ДЛЯ ПОДКЛЮЧЕНИЯ К БАЗЕ ПРОПИСЫВАТЬ В config.inc.php
 
   # Проверим подключение к базе,
   # если нет его, ломаем всё нахер
