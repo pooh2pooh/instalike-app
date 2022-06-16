@@ -39,7 +39,7 @@
     else if (intval($_FILES['image_upload']['size']/1024) < 200 || intval($_FILES['image_upload']['size']/1024) > 5242880)
       die ('Wrong Image Size!<br>SIZE: ' . $_FILES['image_upload']['size']/1024);
 
-    else if ($width > 1500 || $height > 1500)
+    else if ($width > 4000 || $height > 4000)
       die ('Wrong Width or Height!');
 
     $safe_author_id = $_SESSION['id'];
