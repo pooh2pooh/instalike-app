@@ -5,5 +5,5 @@
         'server' => 'localhost',
         'user' => 'pooh',
         'password' => '1234',
-        'database' => 'test'
+        'database' => 'insta'
     ];
